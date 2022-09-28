@@ -1,4 +1,4 @@
-p> Nama : Julita Hasanah <br>
+> Nama : Julita Hasanah <br>
 
 > Nim : 2110131120005
 
@@ -17,15 +17,15 @@ Mengubah citra gambar menjadi grayscale menggunakan rumus Lightness method, Aver
 Perbedaan setiap method :
 
 - **Lightness method**
-  ![gambar2](img/lightness.png)
+  ![gambar2](img/Lightness.png)
   Hasil gambar lebih gelap karena hanya mengambil blok-blok tertentu
 
 - **Average method**
-  ![gambar2](img/average.png)
+  ![gambar2](img/Average.png)
   Mata manusia sensitif dengan warna hijau, merah, biru
 
 - **Luminosity method**
-  ![gambar2](img/luminosity.png)
+  ![gambar2](img/Luminosity.png)
   Hasil lebih bagus dan akurat.
 
 <br><br><br>
