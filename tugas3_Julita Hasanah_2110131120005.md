@@ -1,4 +1,4 @@
-p> Nama : Julita Hasanah <br>
+> Nama : Julita Hasanah <br>
 
 > Nim : 2110131120005
 
@@ -6,7 +6,11 @@ p> Nama : Julita Hasanah <br>
 
 Mengubah citra gambar menjadi grayscale menggunakan rumus Lightness method, Average method, Luminosity method.
 
-![gambar2](img/kodeTugas3.png)
+- <br>
+
+<p align="center"><img width="200" src="img/foto.png"><br>Gambar Asli</p><br>
+
+<p align="center"><img width="400" src="img/kodeTugas3.png"></p><br>
 
 - Pkg load image berfungsi dalam mengaktifkan “package” yang terdapat dalam octave guna melanjutkan proses transformasi.
 - Buat rumus menghitung grayscale kedalam sebuah variable seperti yang telihat pada code di atas yaitu lightness, average, dan luminosity yang mana variable ini nantinya bisa di panggil untuk menampilkan gambar yang sudah dihitung menggunakan rumus dan histogramnya.
@@ -14,23 +18,27 @@ Mengubah citra gambar menjadi grayscale menggunakan rumus Lightness method, Aver
 
 <br>
 
-Perbedaan setiap method :
-
 - **Lightness method**<br>
-  ![gambar1](img/Lightness.png) <br>
-  Hasil gambar lebih gelap karena hanya mengambil blok-blok tertentu
+<p align="center"><img width="350" src="img/Lightness.png"><br></p>
+
+<p align="justify">Hasil gambar lebih gelap karena hanya mengambil blok-blok tertentu yaitu mengambil minimum dan maksimum dari R G B.</p>
+<br>
 
 - **Average method**<br>
-  ![gambar2](img/Average.png)<br>
-  Mata manusia sensitif dengan warna hijau, merah, biru
+<p align="center"><img width="350" src="img/Average.png"><br></p>
+
+<p align="justify">Metode rata-rata adalah yang paling sederhana. Anda hanya perlu mengambil rata-rata tiga warna. Karena ini adalah gambar RGB, jadi itu berarti Anda telah menambahkan R dengan G dengan B dan kemudian membaginya dengan 3.</p
+
+<br>
 
 - **Luminosity method**<br>
-  ![gambar3](img/Luminosity.png)<br>
-  Hasil lebih bagus dan akurat.
+<p align="center"><img width="350" src="img/Luminosity.png"><br></p>
+
+<p align="justify">Metode ini merupakan versi yang lebih canggih dari metode average. Ini juga rata-rata nilai, tetapi membentuk rata-rata tertimbang untuk menjelaskan persepsi manusia. Melalui banyak pengulangan eksperimen yang dirancang dengan hati-hati, psikolog telah menemukan betapa berbedanya kita memandang luminance atau merah, hijau, dan biru. Mereka telah memberi serangkaian bobot yang berbeda untuk rata-rata saluran mendapatkan pencahayaan total.</p>
 
 <br><br><br>
 
-# o**Halftoning Dithering Patterns**
+# **Halftoning Dithering Patterns**
 
 ## **Halftoning** <br>
 
@@ -105,4 +113,77 @@ Contoh kesalahan ini menyebarkan LENA menggunakan 150 sebagai ambang batas (gamb
 
 Contoh kesalahan ini menyebarkan PAINTER menggunakan 128 sebagai ambang batas (gambar 7b).
 
-<p align="center"><img width="480" src="img/gambar7ab.png"><br>Contoh gambar keluaran error_diffusion/p>
+<p align="center"><img width="480" src="img/gambar7ab.png"><br>Contoh gambar keluaran error_diffusion</p>
+
+<br>
+
+---
+
+<br>
+
+## **Cara menentukan pola pada patterning dan dithering**
+
+<br>
+
+### **Pola Patterning**
+
+<p align="justify">Untuk menentukan pola pada patterning dapat dilakukan dengan melakukan perhitungan jumlah font biner lalu ditambah 1. Dan untuk pola yang di hasilkan nanti akan berbeda antara satu dengan yang lainnya.</p><br>
+
+### **Pola Dittering**
+
+<p align="justify">Karena sistem visual manusia cenderung meratakan suatu area di sekitar piksel, bukan melihat setiap piksel secara sendiri-sendiri, sehingga memungkinkan untuk membuat ilusi dari beberapa tingkat keabuan di dalam sebuah citra biner yang dalam kenyataanya hanya terdiri dari dua tingkat abu-abu.<br><br>
+Untuk menghasilkan pola pada dithering dilakukan dengan membandingkan tiap blok dari citra asli dengan sebuah matriks pembatas yang disebut dengan matriks dither. Masing-masing elemen dari blok asli dikuantisasi sesuai dengan nilai batas pada pola dither. Jika nilai nya lebih besar dari batas maka menjadi hitam, dan jika nilai nya lebih kecil dari batas maka warnanya menjadi putih.</p><br>
+
+## **Bagaimana cara menentukan matriks treshold (batas) pada dittering ?**
+
+<br>
+<p align="justify">Thresholding merupakan salah satu metode segmentasi citra dalam suatu citra berdasarkan pada perbedaan tingkat kecerahan atau gelap terang . Dalam proses ini dibutuhkan suatu nilai batas yang disebut nilai threshold. Keluaran dari proses segmentasi dengan metode thresholding adalah berupa citra biner dengan nilai intensitas piksel sebesar 0 atau 1. Warna hitam yang dinyatakan oleh nilai 0 dan warna putih yang dinyatakan oleh nilai 1. Jika nilai intensitasnya lebih dari nilai threshold maka akan di rubah menjadi hitam, dan jika nilai intensitasnya kurang dari nilai threshold maka akan dirubah menjadi warna putih.<br><br>
+Digital halftoning adalah suatu proses untuk mengkonversi citra yang kontinu ke dalam suatu array berupa titik-titik. Jika dilihat oleh sistem visual manusia, pola tersebut akan menciptakan suatu ilusi sehingga citra tersebut tampak bukan seperti citra hitam putih, namun seperti citra abu-abu yang kontinu.<br><br>
+Metode yang paling sederhana untuk mengkonversi citra abu-abu menjadi citra biner adalah dengan menggunakan ambang batas, yaitu dengan dua tingkat (satu bit) kuantisasi. Misalkan f(i,j) adalah sebuah citra abu-abu, dan b(i,j) adalah citra yang dihasilkan dari metode ambang batas yang sederhana. Untuk ambang batas T, citra biner dihitung dengan sebagai berikut:<br></p><br>
+
+<p align="center"><img src="img/tress.png"><br></p>
+
+<br>
+
+<p align="justify">Gambar 1 adalah gambar asli, yaitu gambar “lena.png” dengan resolusi 256 x 256. Gambar 2 menggambarkan hasil konversi ke citra biner dengan ambang batas menggunakan T = 127.</p><br>
+
+<p align="center"><img src="img/lena.png"><br>Citra asli "Lena.png" dengan resolusi 255x256</p><br>
+
+<p align="center"><img src="img/lenaBiner.png"><br>Dihasilkan dari ambang batas tetap yang sederhana</p><br>
+
+<p align="justify">Gambar 1 dan Gambar 2 menunjukkan bahwa citra biner tidak “berbayang” dengan benar. Beberapa artefak di dalam citra tampak sebagai contouring palsu. Hal ini sering terjadi jika kuantisasi dilakukan pada bitrate rendah(dalam hal ini adalah satu bit), sehingga terjadi kesalahan kuantisasi.<br><br>
+Halftoning bertujuan untuk memberikan kesan warna citra biner tampak seperti citra abu-abu meskipun hanya menggunakan piksel warna hitam dan putih saja. Meskipun teknik ambang batas(thresholding) yang sederhana ini dapat mengkonversi citra abu-abu menjadi citra biner, namun kualitas citra yang dihasilkan masih kurang baik. Untuk memperbaiki keterbatasan ini, pada tulisan ini akan disimulasikan citra biner yang dikonversi dari citra abu-abu menggunakan metode ordered dithering</p>
+
+<br>
+
+## **Mengapa pola dittering yg kecil(2×2) tidak sebagus yg lebih besar (4×4)?**
+
+<br>
+<p align="justify">Karena sistem visual manusia cenderung meratakan suatu area di sekitar piksel, bukan melihat setiap piksel secara sendiri-sendiri, sehingga memungkinkan untuk
+membuat ilusi dari beberapa tingkat keabuan di dalam sebuah citra biner yang dalam kenyataanya hanya terdiri dari dua tingkat abu-abu. Dengan menggunakan matriks 2x2 piksel, lima nilai intensitas “efektif” yang berbeda dapat terwakili, seperti yang diilustrasikan pada Gambar 3. Demikian juga dengan matriks 4x4 piksel, sepuluh buah tingkat kabuan yang berbeda dapat terwakili. Metode ini disebut dengan dithering, dalam proses dithering blok asli pada citra kemudian akan diganti dengan jenis pola biner tersebut.</p><br>
+
+<p align="center"><img src="img/2x2.png"><br>Lima pola berbeda dari matriks biner 2x2 pixel</p><br>
+
+<p align="justify">Ordered dithering dilakukan dengan membandingkan tiap blok dari citra asli dengan sebuah matriks pembatas yang disebut dengan matriks dither.Masing-masing elemen dari blok asli dikuantisasi sesuai dengan nilai batas pada pola dither. Nilai-nilai pada matriks ditheradalah tetap, tetapi bisa bervariasi sesuai dengan jenis citra. Matriksdither pertama yang digunakan dalam metode ini adalah:</p><br>
+
+<p align="center"><img src="img/m1.png"><br>Lima pola berbeda dari matriks biner 2x2 pixel</p><br>
+
+<p align="justify">Matriks tersebut diulang sampai mencakup seluruh matriks pada citra yang diolah. Katakanlah d(i,j) adalah matriks yang diperoleh dari mereplika A dan x(i,j) adalah citra abu-abu asli. Piksel untuk citra yang dihasilkan p(i,j) didefenisikan sebagai berikut:</p>
+
+<p align="center"><img src="img/m2.png"></p><br>
+
+<p align="justify">Hasil konversi citra abu-abu pada Gambar 1 menggunakan metode ordered dithering menggunakan matriks dither 2 x 2, ditunjukkan pada Gambar 4.</p><br>
+
+<p align="center"><img src="img/lena2x2.png"><br>Citra menggunakan matriks dithering 2x2</p><br>
+
+<p align="justify">Selain matriks 2x2, teknik ini juga memiliki matriks dithering yang lainnya, yaitu 4x4 sebagai berikut</p><br>
+
+<p align="center"><img src="img/m3.png"></p><br>
+
+Gambar 5 menunjukkan citra yang dihasilkan dari penggunaan ordered dithering matriks 4x4.
+
+<p align="center"><img src="img/lena4x4.png"><br>Citra menggunakan matriks dithering 4x4</p><br>
+
+### **Analisis**
+
+<p align="justify">Citra keluaran dari proses ordered dithering menunjukkan kualitas yang lebih baik dibandingkan dengan metode ambang batas (thresholding). Perbedaan antara keluaran yang dihasilkan antara citra menggunakan 2x2 matriks dithering dan 4x4 matriks dithering terletak pada sensitifitas nilai piksel aslinya. Citra yang dihasilkan dari penggunaaan matriks 2x2 memiliki pola halftone yang kurang dibandingkan dengan citra yang diproses menggunakan matriks dithering 4x4.Karena itu hasil dari citra dengan 2x2 matriks dithering memiliki banyak daerah dengan pola yang sama, seperti pada bagian latar belakang, rambut, dan hidung, meskipun pada daerah ini mengandung lebih banyak jenis nilai piksel.</p>
