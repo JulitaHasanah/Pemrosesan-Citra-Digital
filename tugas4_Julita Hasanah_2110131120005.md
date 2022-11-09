@@ -4,7 +4,7 @@
 
 <br>
 
-<h2 align="center">Pseudocode Patterning, Dittering, Histogram Equalization dan Bit Plane Slicng</h2><br>
+<h2 align="center"><b>Pseudocode Patterning, Dittering, Histogram Equalization dan Bit Plane Slicng</b></h2><br>
 
 ### **Patterning**
 
