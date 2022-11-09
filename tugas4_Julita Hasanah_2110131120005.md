@@ -27,10 +27,19 @@
 
 ### **Bit Plane Slicing**
 
-Misalkan diberikan citra grayscale berukuran 2x2 dengan nilai matriks sebagai berikut : <br>
+Misalkan diberikan citra grayscale berukuran 3x3 dengan nilai matriks sebagai berikut : <br>
 <img width="150" src="img/matriks.png"><br>
 
-1. Ubah nilai intensitas setiap pixel ke dalam biner
+1. Ubah nilai intensitas setiap pixel ke dalam biner 8 digit
 2. Secara berurutan mengambil bit-bit untuk setiap intensitas dan dimasukkan ke dalam matriks baru (Sehingga nanti akan mendapatkan 8 buah matriks baru yang berisi bit-bit dari urutan yang sama)
 3. LSB (citra bit-plane bit terendah) berada pada bagian ujung kanan nilai bit matriks
 4. MSB (citra bit-plane bit tertinggi) berada pada bagian awal atau ujung kiri nilai bit matriks.
+
+<br>
+Hasil dari bit plane slicing pada matriks di atas adalah :
+
+- Ubah nilai pada tiap elemen matriks di atas menjadi bilangan biner 8 digit <br>
+  <img width="300" src="img/mbiner.png"><br>
+
+- Gunakan teknik Bit-Plane Slicing untuk menghasilkan 8 buah matriks baru.<br>
+  <img width="350" src="img/bit-plane.png"><br>
