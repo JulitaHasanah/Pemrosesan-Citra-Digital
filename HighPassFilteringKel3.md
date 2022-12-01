@@ -1,7 +1,7 @@
 ### Kelompok 3
 
 - Julita Hasanah (2110131120005)
-- Maisarah (2110131120006)
+- Maysarah (2110131120006)
 - Muhammad Haris (1810131210009)
 - Trisena Wulandari (1910131320014)
 
@@ -80,3 +80,111 @@ High-Pass Filter sering disebut juga sebagai filter penajaman tepi (edge sharpen
 
 - Output
 <p align="center"><img width="500" src="img/hasilHPF.png"><br></p><br>
+
+---
+
+<h1 align="center"><b>High-Boost Filtering</b></h1>
+
+## **Pengertian**
+
+<p align="justify">High-Boost Filtering merupakan salah satu bagian dari operasi yang dapat dilakukan untuk melakukan perbaikan citra.<br><br>
+High-Boost Filtering bertujuan untuk menekankan komponen frekuensi tinggi yang mewakili detail gambar tanpa menghilangkan komponen frekuensi rendah (seperti sharpening). Filter high boost dapat digunakan untuk mengubah komponen frekuensi tinggi.<br><br>
+High boost filter di susun oleh semua pass filter dan edge detection filter (Laplacian filter). Dengan demikian,  High boost filtering menekankan  edge dan menghasilkan image sharpener.</p>
+
+<br>
+
+## **Kode Program High-Boost Filtering Menggunakan Octave**
+
+1. Menggunakan fungsi
+<p align="center"><img width="550" src="img/codeHighboost.jpeg"><br></p><br>
+<br>
+
+- Output
+<p align="center"><img width="500" src="img/hasilHighboost.jpeg"><br></p><br>
+
+---
+
+<h1 align="center"><b>Median Filter Image Processing</b></h1>
+
+## **Pengertian**
+
+<p align="justify">Median Filtering adalah salah satu teknik filter yang mengurutkan nilai intensitas sekelompok pixel, kemudian mengganti nilai pixel yang diproses dengan nilai mediannya (nilai tengahnya). , metode ini digunakan dalam penghalusan citra (image smoothing) atau menghilangkan derau noise. Filter ini merupakan suatu filter non linear yang dikembangkan oleh Tukey.
+</p>
+
+<br>
+
+## **Kode Program Median Filter Image Processing Menggunakan Octave**
+
+1. Menggunakan fungsi
+<p align="center"><img width="550" src="img/codeMedianFungsi.jpeg"><br></p><br>
+<br>
+
+- Output
+<p align="center"><img width="500" src="img/hasilMedianFungsi.jpeg"><br></p><br>
+
+2. Koding Secara Manual
+<p align="center"><img width="550" src="img/codeMedianManual.jpeg"><br></p><br>
+<br>
+
+- Output
+<p align="center"><img width="500" src="img/hasilMedianManual.jpeg"><br></p><br>
+
+<br>
+
+---
+
+<h1 align="center"><b>Edge Detection</b></h1>
+
+## **Pengertian**
+
+<p align="justify">Deteksi tepi (edge detection) pada suatu citra adalah suatu pendekatan untuk memeroleh tepi-tepi/garis batas dari objek di dalam citra tersebut. Tepi objek bermanfaat untuk segmentasi, registrasi, dan identifikasi antar objek pada citra.
+<br><br>
+Sutu titik (x, y) dapat dikatakan sebagai tepi jika terjadi perubahan nilai intensitas derajat keabuan (grayscale) yang tinggi dalam jarak yang dekat dengan tetangganya.
+<br><br></p>
+
+Tujuan dari deteksi tepi antara lain :
+
+- Meningkatkan penampakan garis batas atau objek dalam citra
+- Mengekstraksi representasi gambar garis-garis di dalam citra.
+- Mengenali objek di dalam citra (image recognition).
+
+<br>
+
+<p align="justify">Adapun operator turunan pertama yaitu Metode Robert, Sobel, dan Prewitt</p><br><br>
+
+## **Kode Program Edge Detection Menggunakan Octave**
+
+1. Menggunakan Fungsi
+
+- Opereator Sobel
+
+<p align="center"><img width="550" src="img/sobel.png"><br></p><br>
+
+- Output
+<p align="center"><img width="500" src="img/hasilSobel.png"><br></p><br>
+
+- Operator Prewitt
+
+<p align="center"><img width="550" src="img/prewitt.png"><br></p><br>
+
+- Output
+<p align="center"><img width="500" src="img/hasilPrewitt.png"><br></p><br>
+
+- Operator Robert
+
+<p align="center"><img width="550" src="img/Robert.png"><br></p><br>
+
+- Output
+<p align="center"><img width="500" src="img/hasilRobert.png"><br></p><br>
+
+<br>
+
+2. Koding Secara Manual
+
+<p align="center"><img width="600" src="img/KodemanualEdge.png"><br></p><br>
+<br>
+
+- Output
+<p align="center"><img width="300" src="img/HManualSobel.png"><br></p><br>
+
+<br>
