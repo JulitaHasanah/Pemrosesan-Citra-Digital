@@ -181,7 +181,7 @@ Tujuan dari deteksi tepi antara lain :
 
 2. Koding Secara Manual
 
-<p align="center"><img width="600" src="img/kodemanualEdge.png"><br></p><br>
+<p align="center"><img width="600" src="img/kodeManualEdge.png"><br></p><br>
 <br>
 
 - Output
